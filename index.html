@@ -35,119 +35,176 @@
   <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
   <header class="site-header">
     <div class="header-inner">
-      <p class="logo"><a href="index.html">Malermeister Andreas Herzog</a></p>
+      <a href="index.html" class="brand" aria-label="Andreas Herzog, Malermeister">
+        <img src="assets/logo-icon.png" alt="Logo Andreas Herzog" class="brand__icon" width="56" height="56">
+        <span class="brand__text">
+          <span class="brand__name">Andreas <span class="brand__name-accent">Herzog</span></span>
+          <span class="brand__sub">Malermeister</span>
+        </span>
+      </a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav class="main-nav" id="main-nav">
+      <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
         <ul class="nav-list">
-          <li><a href="index.html">Start</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="referenzen.html">Referenzen</a></li>
-          <li><a href="ueber-mich.html">Über mich</a></li>
-          <li><a href="subunternehmer.html">Subunternehmer</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#start">Start</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#warum">Warum Andreas Herzog</a></li>
+          <li><a href="#subunternehmer">Subunternehmer</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <h1 class="hero__title">Mobiler <span class="accent">Malermeister</span> in Garmisch-Partenkirchen und Umgebung</h1>
-          <p class="hero__subtitle">
-            Ich arbeite direkt bei Ihnen vor Ort – kein Ladenlokal, kein Publikumsverkehr.
-            <span class="hero__tagline">Persönlich. Präzise. Zuverlässig.</span>
-          </p>
-          <p class="hero__trust">Unverbindliche Beratung und Angebot, ich melde mich zeitnah bei Ihnen.</p>
-          <a href="kontakt.html" class="btn btn--primary">Kontakt aufnehmen</a>
+    <section class="hero-pro" id="start">
+      <div class="container hero-pro__grid">
+        <div class="hero-pro__content">
+          <p class="hero-pro__eyebrow">Malermeister in Garmisch-Partenkirchen</p>
+          <h1 class="hero-pro__title">Andreas Herzog</h1>
+          <p class="hero-pro__subtitle">Präzise Malerarbeiten, Renovierungen und Fassaden mit persönlicher Betreuung.</p>
+          <p class="hero-pro__text">Als Ein-Mann-Meisterbetrieb stehe ich für saubere Ausführung, direkte Kommunikation und zuverlässige Arbeit für Privatkunden, Wohnungen, Häuser und Gewerbe.</p>
+          <div class="hero-pro__actions">
+            <a class="btn btn--primary" href="#kontakt">Angebot anfragen</a>
+            <a class="btn btn--ghost" href="#leistungen">Leistungen ansehen</a>
+          </div>
+          <ul class="hero-pro__trust" aria-label="Vertrauensmerkmale">
+            <li>Zuverlässig</li>
+            <li>Sauber</li>
+            <li>Regional</li>
+          </ul>
         </div>
-        <div class="hero__media">
-          <img src="https://images.pexels.com/photos/5691631/pexels-photo-5691631.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Farbroller und Malerbedarf – mobil einsatzbereit" width="800" height="533" loading="eager" class="hero__img">
+        <div class="hero-pro__media">
+          <img src="https://images.pexels.com/photos/5691631/pexels-photo-5691631.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Professionelle Malerwerkzeuge für präzise Renovierungsarbeiten" loading="eager">
         </div>
       </div>
     </section>
 
-    <section class="section section--alt">
+    <section class="section-pro" id="leistungen">
       <div class="container">
-        <h2 class="section-title">Leistungen</h2>
-        <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">
-          Als Maler in Garmisch-Partenkirchen biete ich Ihnen hochwertige Innen- und Fassadenarbeiten aus einer Hand.
-        </p>
-        <div class="card-grid">
-          <article class="card">
-            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="6" width="6" height="12" rx="1"/>
-              <path d="M8 10h12v4H8z"/>
-              <path d="M14 10V6"/>
-            </svg>
+        <header class="section-pro__head">
+          <p class="section-pro__label">Leistungen</p>
+          <h2>Malerarbeiten aus Meisterhand</h2>
+          <p>Für Privatkunden und Geschäftskunden in Garmisch-Partenkirchen: zuverlässig geplant, sauber umgesetzt und hochwertig im Ergebnis.</p>
+        </header>
+        <div class="service-grid">
+          <article class="service-card">
             <h3>Innenanstriche</h3>
-            <p>Wände, Decken, Renovierungen – fachgerecht und termingerecht bei Ihnen vor Ort.</p>
-            <a href="leistungen.html#innen">Mehr erfahren</a>
+            <p>Wände und Decken sauber vorbereitet, präzise ausgeführt und auf Ihre Räume abgestimmt.</p>
           </article>
-          <article class="card">
-            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-            <h3>Fassadenanstrich</h3>
-            <p>Fassadenanstrich Garmisch-Partenkirchen und Umgebung: Schutz und optische Aufwertung.</p>
-            <a href="leistungen.html#fassade">Mehr erfahren</a>
+          <article class="service-card">
+            <h3>Fassaden</h3>
+            <p>Schutz und Aufwertung für Außenflächen mit langlebigen Systemen und sauberer Verarbeitung.</p>
           </article>
-          <article class="card">
-            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 19l7-7 3 3-7 7-3-3z"/>
-              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-            </svg>
-            <h3>Detailarbeit</h3>
-            <p>Lackierarbeiten, Dekorative Gestaltung und Sonderwünsche – alles aus Meisterhand.</p>
-            <a href="leistungen.html">Mehr erfahren</a>
+          <article class="service-card">
+            <h3>Renovierung</h3>
+            <p>Teil- oder Komplettsanierung mit klarer Abstimmung und zuverlässigen Zeitfenstern.</p>
+          </article>
+          <article class="service-card">
+            <h3>Lackierarbeiten</h3>
+            <p>Türen, Zargen und weitere Bauteile mit glattem, hochwertigem Finish in Meisterqualität.</p>
+          </article>
+          <article class="service-card">
+            <h3>Spachtelarbeiten</h3>
+            <p>Saubere Untergründe als Basis für ein ruhiges, hochwertiges Oberflächenbild.</p>
           </article>
         </div>
-        <p style="margin-top: 1.5rem;">
-          <a href="leistungen.html" class="btn btn--outline">Alle Leistungen</a>
-        </p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Ihre Vorteile</h2>
-        <ul class="feature-list">
-          <li><strong>Mobil:</strong> Ich komme zu Ihnen – in Garmisch-Partenkirchen, Grainau, Farchant und Umgebung.</li>
-          <li><strong>Meisterbetrieb:</strong> Qualität und Sorgfalt aus einer Hand, mit Meisterprüfung.</li>
-          <li><strong>Persönlich:</strong> Ein fester Ansprechpartner, klare Absprachen, zuverlässige Termine.</li>
-          <li><strong>Transparent:</strong> Unverbindliche Besichtigung und Festpreisangebot auf Wunsch.</li>
+    <section class="section-pro section-pro--alt" id="warum">
+      <div class="container why-grid">
+        <div>
+          <p class="section-pro__label">Warum Andreas Herzog</p>
+          <h2>Vertrauen durch persönliche Betreuung</h2>
+          <p>Sie arbeiten direkt mit dem Meister selbst – ohne Umwege. Das sorgt für klare Absprachen, verlässliche Termine und ein sauberes Ergebnis.</p>
+        </div>
+        <ul class="why-list">
+          <li><strong>Persönliche Betreuung</strong><span>Ein Ansprechpartner von der Anfrage bis zur Abnahme.</span></li>
+          <li><strong>Saubere Ausführung</strong><span>Sorgfältige Arbeitsweise mit Blick auf Details und Ordnung.</span></li>
+          <li><strong>Zuverlässige Terminabsprachen</strong><span>Realistische Planung und transparente Kommunikation.</span></li>
+          <li><strong>Qualität aus Meisterhand</strong><span>Fachwissen, Erfahrung und Anspruch an langlebige Ergebnisse.</span></li>
         </ul>
-        <p style="margin-top: 1.5rem;">
-          <a href="ueber-mich.html" class="btn btn--outline">Über mich</a>
-        </p>
       </div>
     </section>
 
-    <section class="section section--alt">
+    <section class="section-pro" id="referenzen">
       <div class="container">
-        <h2 class="section-title">Kontakt</h2>
-        <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
-          Sie planen einen Anstrich oder brauchen einen zuverlässigen Malermeister in Garmisch-Partenkirchen? Gern beantworte ich Ihre Fragen und erstelle ein unverbindliches Angebot.
-        </p>
-        <p style="color: var(--color-text-muted); margin-bottom: 1.25rem;">
-          Am besten erreichen Sie mich per Telefon – ich rufe Sie auch gern zurück. Telefon und E-Mail finden Sie auf der <a href="kontakt.html">Kontaktseite</a>.
-        </p>
-        <a href="kontakt.html" class="btn btn--primary">Zur Kontaktseite</a>
+        <header class="section-pro__head">
+          <p class="section-pro__label">Referenzen / Beispiele</p>
+          <h2>Typische Projektbereiche</h2>
+          <p>Die folgenden Bilder dienen als neutrale Beispielillustration für Leistungen in Innenraum, Fassade und Objektbereich.</p>
+        </header>
+        <div class="reference-grid">
+          <article class="reference-card">
+            <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=900&amp;q=80" alt="Beispielbild Innenanstrich in modernem Wohnraum" loading="lazy">
+            <h3>Innenraum</h3>
+            <p>Stimmige Farbkonzepte, saubere Kanten und hochwertige Oberflächen.</p>
+          </article>
+          <article class="reference-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&amp;q=80" alt="Beispielbild Fassade an Wohnhaus" loading="lazy">
+            <h3>Fassade</h3>
+            <p>Witterungsschutz und optische Aufwertung für Wohn- und Gewerbeobjekte.</p>
+          </article>
+          <article class="reference-card">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&amp;q=80" alt="Beispielbild Arbeiten im Objektbereich" loading="lazy">
+            <h3>Objektbereich</h3>
+            <p>Zuverlässige Ausführung für Wohnungen, Sanierungen und Gewerbeflächen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pro section-pro--alt" id="subunternehmer">
+      <div class="container business-panel">
+        <p class="section-pro__label">Subunternehmer / Zusammenarbeit</p>
+        <h2>Zuverlässiger Partner für Bauunternehmen und Projektarbeiten</h2>
+        <p>Auch als Subunternehmer für Bauunternehmen, Sanierungen und Projektarbeiten verfügbar. Klare Kommunikation, termintreue Umsetzung und verlässliche Qualität vor Ort in Garmisch-Partenkirchen und Umgebung.</p>
+      </div>
+    </section>
+
+    <section class="section-pro" id="kontakt">
+      <div class="container">
+        <header class="section-pro__head">
+          <p class="section-pro__label">Kontakt</p>
+          <h2>Direkt anfragen</h2>
+          <p>Kurze Wege, persönliche Rückmeldung und eine klare Einschätzung zu Ihrem Projekt.</p>
+        </header>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Telefon</h3>
+            <a href="tel:+491711968368">+49 171 1968368</a>
+            <p>Gern mit Rückrufwunsch.</p>
+          </article>
+          <article class="contact-card">
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/491711968368?text=Guten%20Tag%20Herr%20Herzog%2C%20ich%20habe%20eine%20Anfrage%20zu%20Malerarbeiten%20in%20Garmisch-Partenkirchen.%20K%C3%B6nnten%20Sie%20sich%20bitte%20melden%3F" target="_blank" rel="noopener noreferrer">Nachricht senden</a>
+            <p>Schnelle Abstimmung zum Projekt.</p>
+          </article>
+          <article class="contact-card">
+            <h3>E-Mail</h3>
+            <a href="mailto:info@example.de?subject=Anfrage%20Malerarbeiten%20Garmisch-Partenkirchen">info@example.de</a>
+            <p>E-Mail-Adresse später final eintragen.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p class="logo"><a href="index.html">Malermeister Andreas Herzog</a></p>
-      <p>Ihr Malermeister für Garmisch-Partenkirchen, Grainau, Farchant und Umgebung</p>
-      <nav class="footer-legal">
+  <footer class="footer-pro">
+    <div class="container footer-pro__inner">
+      <div>
+        <p class="footer-pro__brand">Andreas Herzog</p>
+        <p class="footer-pro__sub">Malermeister</p>
+        <p class="footer-pro__text">Ihr Malermeister für Garmisch-Partenkirchen, Grainau, Farchant und Umgebung.</p>
+      </div>
+      <nav class="footer-pro__links" aria-label="Footer Navigation">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#subunternehmer">Subunternehmer</a>
+        <a href="#kontakt">Kontakt</a>
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
       </nav>

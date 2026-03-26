@@ -40,4 +40,40 @@
       });
     }
   });
+
+  // Active state for one-page navigation links
+  var sectionLinks = Array.from(document.querySelectorAll('.main-nav a[href^="#"]'));
+  var sectionIds = sectionLinks.map(function (link) { return link.getAttribute('href'); });
+  var sections = sectionIds
+    .map(function (id) { return document.querySelector(id); })
+    .filter(function (node) { return !!node; });
+
+  if (sectionLinks.length && sections.length && 'IntersectionObserver' in window) {
+    var setActive = function (id) {
+      sectionLinks.forEach(function (link) {
+        var active = link.getAttribute('href') === id;
+        link.classList.toggle('is-active', active);
+        if (active) {
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          setActive('#' + entry.target.id);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '-35% 0px -55% 0px',
+      threshold: 0.01
+    });
+
+    sections.forEach(function (section) { observer.observe(section); });
+    setActive(sectionLinks[0].getAttribute('href'));
+  }
 })();
