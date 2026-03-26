@@ -3,10 +3,17 @@
 
   var nav = document.querySelector('.main-nav');
   var toggle = document.querySelector('.nav-toggle');
+  var mobileBreakpoint = 768;
 
   if (toggle && nav) {
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', 'main-nav');
+
+    var closeMenu = function () {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
 
     toggle.addEventListener('click', function () {
       var isOpen = nav.classList.contains('is-open');
@@ -19,10 +26,26 @@
 
     document.querySelectorAll('.main-nav a').forEach(function (link) {
       link.addEventListener('click', function () {
-        if (window.innerWidth < 768) {
-          nav.classList.remove('is-open');
-          toggle.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
+        var href = link.getAttribute('href') || '';
+        var isMobile = window.innerWidth < mobileBreakpoint;
+        var isSamePageAnchor = href.charAt(0) === '#';
+
+        if (isMobile && isSamePageAnchor) {
+          var target = document.querySelector(href);
+          closeMenu();
+          if (target) {
+            window.requestAnimationFrame(function () {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+            if (window.history && window.history.pushState) {
+              window.history.pushState(null, '', href);
+            }
+          }
+          return;
+        }
+
+        if (isMobile) {
+          closeMenu();
         }
       });
     });
@@ -30,6 +53,7 @@
 
   // Smooth scroll for anchor links (same page)
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    if (anchor.closest('.main-nav')) return;
     var href = anchor.getAttribute('href');
     if (href === '#') return;
     var target = document.querySelector(href);
