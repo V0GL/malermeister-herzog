@@ -2,11 +2,29 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andreas Herzog – Malermeister</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Malermeister Andreas Herzog | Maler in Garmisch-Partenkirchen</title>
     <meta
       name="description"
-      content="Hochwertige Malerarbeiten, kreative Gestaltung und perfekte Oberflächen – Malermeister Andreas Herzog."
+      content="Malermeister Andreas Herzog – Ihr Malerbetrieb für Innenanstrich, Fassaden, Renovierungen und saubere Malerarbeiten in Garmisch-Partenkirchen und Umgebung."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta
+      property="og:title"
+      content="Malermeister Andreas Herzog | Maler in Garmisch-Partenkirchen"
+    />
+    <meta
+      property="og:description"
+      content="Ihr Malerbetrieb für Innenanstrich, Fassaden, Renovierungen und saubere Malerarbeiten in Garmisch-Partenkirchen und Umgebung."
+    />
+    <meta property="og:url" content="https://www.malermeister-herzog.de/" />
+    <meta
+      property="og:image"
+      content="https://www.malermeister-herzog.de/assets/malermeister-herzog-wohnraum-gestaltung-1920.webp"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,12 +35,38 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Malermeister Andreas Herzog",
+        "telephone": "+49 171 1968368",
+        "areaServed": "Garmisch-Partenkirchen und Umgebung",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Garmisch-Partenkirchen",
+          "addressCountry": "DE"
+        },
+        "url": "https://www.malermeister-herzog.de/"
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
       <div class="site-header__inner shell">
+        <input type="checkbox" id="nav-drawer" class="nav-drawer__checkbox" />
+
+        <label
+          for="nav-drawer"
+          class="nav-drawer__burger"
+          aria-label="Menü öffnen und schließen"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
         <a href="#" class="site-logo" aria-label="Startseite Andreas Herzog">
-          <!-- Header-Asset 760×180 (weniger Leerraum als logo_new 1200×800 → wirkt größer) -->
           <img
             src="assets/logo-new-header.webp"
             width="760"
@@ -31,14 +75,16 @@
           />
         </a>
 
-        <nav class="site-nav" aria-label="Hauptnavigation">
+        <a href="tel:+491711968368" class="header-cta">Jetzt anrufen</a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
           <a href="#leistungen">Leistungen</a>
           <a href="#ueber-uns">Über uns</a>
-          <a href="#referenzen">Referenzen</a>
+          <a href="#einblicke">Einblicke</a>
           <a href="#kontakt">Kontakt</a>
         </nav>
 
-        <a href="#kontakt" class="header-cta">Anfrage stellen</a>
+        <label for="nav-drawer" class="nav-drawer__scrim" aria-hidden="true"></label>
       </div>
     </header>
 
@@ -54,6 +100,8 @@
           "
           sizes="100vw"
           alt="Modernes Wohnzimmer mit strukturierter Wand und warmem Licht"
+          fetchpriority="high"
+          loading="eager"
         />
         <div class="hero__overlay" aria-hidden="true"></div>
 
@@ -67,10 +115,12 @@
             <p class="hero__sub">
               Hochwertige Malerarbeiten, kreative Gestaltung und perfekte Oberflächen – für ein Zuhause zum Wohlfühlen.
             </p>
+            <p class="hero__location">In Garmisch-Partenkirchen und Umgebung</p>
             <div class="hero__actions">
-              <a href="#kontakt" class="btn btn--primary">Projekt anfragen</a>
-              <a href="#leistungen" class="btn btn--secondary">Leistungen ansehen</a>
+              <a href="tel:+491711968368" class="btn btn--primary">Jetzt anrufen</a>
+              <a href="#kontakt" class="btn btn--secondary">Projekt anfragen</a>
             </div>
+            <p class="hero__hint">Rückmeldung meist innerhalb von 24 Stunden.</p>
           </div>
         </div>
       </section>
@@ -141,10 +191,583 @@
         </div>
       </section>
 
-      <div id="leistungen" class="anchor" aria-hidden="true"></div>
-      <div id="ueber-uns" class="anchor" aria-hidden="true"></div>
-      <div id="referenzen" class="anchor" aria-hidden="true"></div>
-      <div id="kontakt" class="anchor" aria-hidden="true"></div>
+      <section id="leistungen" class="section section--leistungen" aria-labelledby="leistungen-heading">
+        <div class="shell">
+          <p class="section__eyebrow">Unsere Leistungen</p>
+          <h2 id="leistungen-heading">Leistungen</h2>
+          <p class="section__intro">
+            Wir bieten Ihnen saubere, langlebige und optisch hochwertige Malerarbeiten für Privat- und
+            Gewerbeobjekte.
+          </p>
+
+          <div class="cards cards--leistungen">
+            <article class="card">
+              <h3>Innenanstrich</h3>
+              <p>Gleichmäßige Wand- und Deckenanstriche für ein frisches, harmonisches Raumgefühl.</p>
+            </article>
+            <article class="card">
+              <h3>Fassadenanstrich</h3>
+              <p>Witterungsbeständige Beschichtungen, die Ihre Fassade schützen und dauerhaft aufwerten.</p>
+            </article>
+            <article class="card">
+              <h3>Renovierung</h3>
+              <p>Durchdachte Renovierungslösungen von der Planung bis zur sauberen, termingerechten Umsetzung.</p>
+            </article>
+            <article class="card">
+              <h3>Tapezierarbeiten</h3>
+              <p>Präzises Tapezieren von klassisch bis modern mit sauberem Kantenbild und stimmigem Ergebnis.</p>
+            </article>
+            <article class="card">
+              <h3>Spachtel- &amp; Ausbesserungsarbeiten</h3>
+              <p>Glatte und tragfähige Untergründe als perfekte Basis für hochwertige Endbeschichtungen.</p>
+            </article>
+            <article class="card">
+              <h3>Lackierarbeiten</h3>
+              <p>Langlebige Lackierungen von Türen, Zargen und Bauteilen mit präzisem Finish.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="einblicke" class="section section--einblicke" aria-labelledby="einblicke-heading">
+        <div class="shell">
+          <h2 id="einblicke-heading">Einblicke &amp; Farbideen</h2>
+          <p class="section__intro">
+            Sie zeigen, wie Farben und Oberflächen Räume verändern können.
+          </p>
+          <p class="section__note">
+            Beispielhafte Visualisierungen – keine echten Kundenreferenzen. Sie zeigen, wie Farben und Oberflächen
+            Räume verändern können.
+          </p>
+
+          <div class="einblicke-tabs" role="tablist" aria-label="Rubriken Einblicke">
+            <button
+              type="button"
+              class="einblicke-tab is-active"
+              role="tab"
+              id="tab-wohnzimmer"
+              aria-selected="true"
+              aria-controls="panel-wohnzimmer"
+              data-tab-target="wohnzimmer"
+            >
+              Wohnzimmer
+            </button>
+            <button
+              type="button"
+              class="einblicke-tab"
+              role="tab"
+              id="tab-fassade"
+              aria-selected="false"
+              aria-controls="panel-fassade"
+              data-tab-target="fassade"
+              tabindex="-1"
+            >
+              Fassade
+            </button>
+            <button
+              type="button"
+              class="einblicke-tab"
+              role="tab"
+              id="tab-treppenhaus"
+              aria-selected="false"
+              aria-controls="panel-treppenhaus"
+              data-tab-target="treppenhaus"
+              tabindex="-1"
+            >
+              Treppenhaus
+            </button>
+          </div>
+
+          <section
+            class="einblicke-panel is-active"
+            id="panel-wohnzimmer"
+            role="tabpanel"
+            aria-labelledby="tab-wohnzimmer"
+            data-panel="wohnzimmer"
+          >
+            <p class="einblicke-step">1. Wandfarbe wählen</p>
+            <h3 class="einblicke-subhead">Farbwirkung im Wohnzimmer</h3>
+            <p class="einblicke-step__intro">
+              Sehen Sie, wie unterschiedliche Wandfarben die Raumwirkung verändern.
+            </p>
+            <div class="farbauswahl" data-farbauswahl>
+              <div class="farbauswahl__media">
+                <div class="farbauswahl__stage">
+                  <picture class="farbauswahl__picture" data-farbauswahl-picture>
+                    <source media="(min-width: 1025px)" srcset="assets/wohnzimmer/farben/wohnzimmer-weiss-1600.webp" />
+                    <source media="(min-width: 641px)" srcset="assets/wohnzimmer/farben/wohnzimmer-weiss-800.webp" />
+                    <img
+                      data-farbauswahl-image
+                      src="assets/wohnzimmer/farben/wohnzimmer-weiss-400.webp"
+                      width="800"
+                      height="800"
+                      alt="Wohnzimmer in klassischem Weiß"
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="farbauswahl__panel">
+                <p class="farbauswahl__label">Farbton wählen</p>
+                <div class="farbauswahl__controls" role="radiogroup" aria-label="Wandfarbe auswählen">
+                  <button type="button" class="farbauswahl__swatch is-active" role="radio" aria-checked="true" data-color="weiss" data-label="Klassisches Weiß">
+                    <span class="farbauswahl__dot" style="--swatch:#f5f5f3"></span><span>Klassisches Weiß</span>
+                  </button>
+                  <button type="button" class="farbauswahl__swatch" role="radio" aria-checked="false" data-color="beige" data-label="Warmes Beige">
+                    <span class="farbauswahl__dot" style="--swatch:#d8c3a5"></span><span>Warmes Beige</span>
+                  </button>
+                  <button type="button" class="farbauswahl__swatch" role="radio" aria-checked="false" data-color="grau" data-label="Sanftes Grau">
+                    <span class="farbauswahl__dot" style="--swatch:#b7b7b7"></span><span>Sanftes Grau</span>
+                  </button>
+                  <button type="button" class="farbauswahl__swatch" role="radio" aria-checked="false" data-color="salbeigruen" data-label="Salbeigrün">
+                    <span class="farbauswahl__dot" style="--swatch:#aeb7a2"></span><span>Salbeigrün</span>
+                  </button>
+                  <button type="button" class="farbauswahl__swatch" role="radio" aria-checked="false" data-color="blaugrau" data-label="Blaugrau">
+                    <span class="farbauswahl__dot" style="--swatch:#8fa3ad"></span><span>Blaugrau</span>
+                  </button>
+                  <button type="button" class="farbauswahl__swatch" role="radio" aria-checked="false" data-color="warmtaupe" data-label="Warmtaupe">
+                    <span class="farbauswahl__dot" style="--swatch:#b8a89a"></span><span>Warmtaupe</span>
+                  </button>
+                </div>
+                <div class="farbauswahl__info">
+                  <p class="farbauswahl__active" data-farbauswahl-active>Klassisches Weiß</p>
+                  <p class="farbauswahl__description" data-farbauswahl-description>
+                    Klar, hell und zeitlos – ideal für ruhige, offene Räume.
+                  </p>
+                </div>
+                <a href="#kontakt" class="btn btn--primary einblicke__cta">Farbberatung anfragen</a>
+              </div>
+            </div>
+            <p class="einblicke-step einblicke-step--ideas">2. Gestaltungsideen mit Ihrer Farbe</p>
+            <h3 class="einblicke-subhead einblicke-subhead--ideas" data-ideen-title>Gestaltungsideen in Weiß</h3>
+            <p class="einblicke-step__intro">
+              Entdecken Sie, wie sich die gewählte Farbe als Akzentwand, halbhohe Gestaltung oder ruhiger Ton-in-Ton-Look einsetzen lässt.
+            </p>
+
+            <div class="ideen-accordion">
+              <details class="ideen-item" open>
+                <summary>Akzentwand</summary>
+                <p class="ideen-text">Eine gezielte Akzentfläche lenkt den Blick und setzt Möbel oder Architektur bewusst in Szene.</p>
+                <div class="cards cards--ideen">
+                  <button type="button" class="einblicke-card-trigger ideen-trigger" data-modal-image="assets/wohnzimmer/ideen/wohnzimmer-akzent-beige-1600.webp" data-modal-title="Akzentwand" data-modal-text="Beispielhafte Visualisierung einer Akzentwand."><img src="assets/wohnzimmer/ideen/wohnzimmer-akzent-beige-800.webp" alt="Visualisierung Akzentwand Variante 1" width="800" height="533" loading="lazy" /></button>
+                  <button type="button" class="einblicke-card-trigger ideen-trigger" data-modal-image="assets/wohnzimmer/ideen/wohnzimmer-tvwand-beige-1600.webp" data-modal-title="Akzentwand" data-modal-text="Beispielhafte Visualisierung einer Akzentwand."><img src="assets/wohnzimmer/ideen/wohnzimmer-tvwand-beige-800.webp" alt="Visualisierung Akzentwand Variante 2" width="800" height="533" loading="lazy" /></button>
+                  <button type="button" class="einblicke-card-trigger ideen-trigger" data-modal-image="assets/wohnzimmer/ideen/wohnzimmer-fensterwand-beige-1600.webp" data-modal-title="Akzentwand" data-modal-text="Beispielhafte Visualisierung einer Akzentwand."><img src="assets/wohnzimmer/ideen/wohnzimmer-fensterwand-beige-800.webp" alt="Visualisierung Akzentwand Variante 3" width="800" height="533" loading="lazy" /></button>
+                  <button type="button" class="einblicke-card-trigger ideen-trigger" data-modal-image="assets/wohnzimmer/ideen/wohnzimmer-decke-beige-1600.webp" data-modal-title="Akzentwand" data-modal-text="Beispielhafte Visualisierung einer Akzentwand."><img src="assets/wohnzimmer/ideen/wohnzimmer-decke-beige-800.webp" alt="Visualisierung Akzentwand Variante 4" width="800" height="533" loading="lazy" /></button>
+                </div>
+                <p class="ideen-note">Diese Gestaltung kann auch in Ihrem Raum umgesetzt werden.</p>
+                <a href="#kontakt" class="btn btn--primary einblicke__cta">Beratung anfragen</a>
+              </details>
+
+              <details class="ideen-item">
+                <summary>Halbhohe Wandgestaltung</summary>
+                <p class="ideen-text">Die Wand wird horizontal geteilt – modern, ruhig und strukturiert.</p>
+                <div class="cards cards--ideen">
+                  <button type="button" class="einblicke-card-trigger ideen-trigger" data-modal-image="assets/wohnzimmer/ideen/wohnzimmer-halbe-wand-beige-1600.webp" data-modal-title="Halbhohe Wandgestaltung" data-modal-text="Beispielhafte Visualisierung einer halbhohen Wandgestaltung."><img src="assets/wohnzimmer/ideen/wohnzimmer-halbe-wand-beige-800.webp" alt="Visualisierung Halbhohe Wandgestaltung" width="800" height="533" loading="lazy" /></button>
+                </div>
+                <p class="ideen-note">Diese Gestaltung kann auch in Ihrem Raum umgesetzt werden.</p>
+                <a href="#kontakt" class="btn btn--primary einblicke__cta">Beratung anfragen</a>
+              </details>
+
+              <details class="ideen-item">
+                <summary>Ton-in-Ton-Look</summary>
+                <p class="ideen-text">Mehrere Abstufungen einer Farbe sorgen für ein ruhiges, hochwertiges Gesamtbild.</p>
+                <div class="cards cards--ideen">
+                  <button type="button" class="einblicke-card-trigger ideen-trigger" data-modal-image="assets/wohnzimmer/ideen/wohnzimmer-beige-abstufung-1600.webp" data-modal-title="Ton-in-Ton-Look" data-modal-text="Beispielhafte Visualisierung eines Ton-in-Ton-Looks."><img src="assets/wohnzimmer/ideen/wohnzimmer-beige-abstufung-800.webp" alt="Visualisierung Ton-in-Ton-Look" width="800" height="533" loading="lazy" /></button>
+                </div>
+                <p class="ideen-note">Diese Gestaltung kann auch in Ihrem Raum umgesetzt werden.</p>
+                <a href="#kontakt" class="btn btn--primary einblicke__cta">Beratung anfragen</a>
+              </details>
+
+              <details class="ideen-item">
+                <summary>Decke und Wand in einem Farbton</summary>
+                <p class="ideen-text">Ein durchgehender Farbton schafft ein harmonisches, ruhiges und modernes Raumgefühl.</p>
+                <div class="cards cards--ideen">
+                  <button type="button" class="einblicke-card-trigger ideen-trigger" data-modal-image="assets/wohnzimmer/ideen/wohnzimmer-decke-wand-beige-final-1600.webp" data-modal-title="Decke und Wand in einem Farbton" data-modal-text="Beispielhafte Visualisierung: Decke und Wand in einem Farbton."><img src="assets/wohnzimmer/ideen/wohnzimmer-decke-wand-beige-final-800.webp" alt="Visualisierung Decke und Wand in einem Farbton" width="800" height="533" loading="lazy" /></button>
+                </div>
+                <p class="ideen-note">Diese Gestaltung kann auch in Ihrem Raum umgesetzt werden.</p>
+                <a href="#kontakt" class="btn btn--primary einblicke__cta">Beratung anfragen</a>
+              </details>
+
+              <details class="ideen-item">
+                <summary>Vertikale Teilung</summary>
+                <p class="ideen-text">Vertikale Farbfelder können den Raum optisch strecken und klar zonieren.</p>
+                <div class="cards cards--ideen">
+                  <button type="button" class="einblicke-card-trigger ideen-trigger" data-modal-image="assets/wohnzimmer/ideen/wohnzimmer-vertikale-streifen-beige-1600.webp" data-modal-title="Vertikale Teilung" data-modal-text="Beispielhafte Visualisierung einer vertikalen Wandteilung."><img src="assets/wohnzimmer/ideen/wohnzimmer-vertikale-streifen-beige-800.webp" alt="Visualisierung vertikale Wandteilung" width="800" height="533" loading="lazy" /></button>
+                </div>
+                <p class="ideen-note">Diese Gestaltung kann auch in Ihrem Raum umgesetzt werden.</p>
+                <a href="#kontakt" class="btn btn--primary einblicke__cta">Beratung anfragen</a>
+              </details>
+
+              <details class="ideen-item">
+                <summary>Sockelgestaltung</summary>
+                <p class="ideen-text">Ein farbiges unteres Drittel schafft Tiefe, schützt die Wand und setzt den Raum elegant ab.</p>
+                <div class="cards cards--ideen">
+                  <button type="button" class="einblicke-card-trigger ideen-trigger" data-modal-image="assets/wohnzimmer/ideen/wohnzimmer-sockel-beige-1600.webp" data-modal-title="Sockelgestaltung" data-modal-text="Beispielhafte Visualisierung einer Sockelgestaltung."><img src="assets/wohnzimmer/ideen/wohnzimmer-sockel-beige-800.webp" alt="Visualisierung Sockelgestaltung" width="800" height="533" loading="lazy" /></button>
+                </div>
+                <p class="ideen-note">Diese Gestaltung kann auch in Ihrem Raum umgesetzt werden.</p>
+                <a href="#kontakt" class="btn btn--primary einblicke__cta">Beratung anfragen</a>
+              </details>
+            </div>
+          </section>
+
+          <section
+            class="einblicke-panel"
+            id="panel-fassade"
+            role="tabpanel"
+            aria-labelledby="tab-fassade"
+            data-panel="fassade"
+            hidden
+          >
+            <div class="cards cards--einblicke">
+              <article class="card card--farb card--placeholder"><h3>Visualisierung folgt</h3></article>
+              <article class="card card--farb card--placeholder"><h3>Visualisierung folgt</h3></article>
+              <article class="card card--farb card--placeholder"><h3>Visualisierung folgt</h3></article>
+            </div>
+            <a href="#kontakt" class="btn btn--primary einblicke__cta">Farbberatung anfragen</a>
+          </section>
+
+          <section
+            class="einblicke-panel"
+            id="panel-treppenhaus"
+            role="tabpanel"
+            aria-labelledby="tab-treppenhaus"
+            data-panel="treppenhaus"
+            hidden
+          >
+            <div class="cards cards--einblicke">
+              <article class="card card--farb card--placeholder"><h3>Visualisierung folgt</h3></article>
+              <article class="card card--farb card--placeholder"><h3>Visualisierung folgt</h3></article>
+              <article class="card card--farb card--placeholder"><h3>Visualisierung folgt</h3></article>
+            </div>
+            <a href="#kontakt" class="btn btn--primary einblicke__cta">Farbberatung anfragen</a>
+          </section>
+        </div>
+      </section>
+
+      <section id="ueber-uns" class="section section--about" aria-labelledby="about-heading">
+        <div class="shell">
+          <p class="section__eyebrow">Über uns</p>
+          <h2 id="about-heading">Malermeister Andreas Herzog</h2>
+          <p class="section__intro">
+            Als traditioneller Meisterbetrieb stehen wir für saubere Arbeit, persönliche Beratung und zuverlässige
+            Ausführung. Regional in Garmisch-Partenkirchen und Umgebung sind wir persönlich für Sie da.
+          </p>
+          <div class="cards cards--trust">
+            <article class="card card--trust">
+              <h3>Meisterqualität</h3>
+            </article>
+            <article class="card card--trust">
+              <h3>Saubere Baustelle</h3>
+            </article>
+            <article class="card card--trust">
+              <h3>Persönlicher Ansprechpartner</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="referenzen" class="section section--referenzen section--future" aria-labelledby="referenzen-heading">
+        <div class="shell">
+          <p class="section__eyebrow">Später verfügbar</p>
+          <h2 id="referenzen-heading">Referenzen</h2>
+          <p class="section__intro">
+            Echte Projekt-Referenzen ergänzen wir hier separat, sobald freigegebene Vorher-/Nachher-Projekte vorliegen.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--stimmen" aria-labelledby="kundenstimmen-heading">
+        <div class="shell">
+          <h2 id="kundenstimmen-heading">Kundenstimmen</h2>
+          <div class="cards cards--stimmen">
+            <article class="card">
+              <p>„Sehr saubere Arbeit und zuverlässig.“</p>
+            </article>
+            <article class="card">
+              <p>„Schnelle Umsetzung und gute Beratung.“</p>
+            </article>
+            <article class="card">
+              <p>„Ordentlich, freundlich und termintreu.“</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--gebiet" aria-labelledby="einsatzgebiet-heading">
+        <div class="shell">
+          <h2 id="einsatzgebiet-heading">Einsatzgebiet</h2>
+          <p class="section__intro">
+            Malerarbeiten in Garmisch-Partenkirchen, Grainau, Farchant, Oberau, Mittenwald und Umgebung.
+          </p>
+        </div>
+      </section>
+
+      <section id="kontakt" class="section section--kontakt" aria-labelledby="kontakt-heading">
+        <div class="shell">
+          <p class="section__eyebrow">Kontakt</p>
+          <h2 id="kontakt-heading">Kontakt</h2>
+          <div class="kontakt__grid">
+            <div class="kontakt__info">
+              <p><strong>Telefon:</strong> <a href="tel:+491711968368">+49 171 1968368</a></p>
+              <p><strong>E-Mail:</strong> <a href="mailto:info@malermeister-herzog.de">info@malermeister-herzog.de</a></p>
+              <p><strong>Ort:</strong> Garmisch-Partenkirchen und Umgebung</p>
+            </div>
+            <form class="kontakt__form" action="#" method="post">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+
+              <label for="telefon">Telefon</label>
+              <input id="telefon" name="telefon" type="tel" autocomplete="tel" required />
+
+              <label for="nachricht">Nachricht</label>
+              <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
+
+              <label class="checkbox">
+                <input type="checkbox" name="datenschutz" required />
+                Ich stimme der Verarbeitung meiner Daten gemäß Datenschutzhinweis zu.
+              </label>
+
+              <button type="submit" class="btn btn--primary">Anfrage senden</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <div class="modal" id="einblicke-modal" role="dialog" aria-modal="true" aria-labelledby="einblicke-modal-title" hidden>
+      <div class="modal__backdrop" data-modal-backdrop="true"></div>
+      <div class="modal__content" role="document">
+        <button type="button" class="modal__nav modal__nav--prev" id="einblicke-modal-prev" aria-label="Vorheriges Bild">‹</button>
+        <button type="button" class="modal__nav modal__nav--next" id="einblicke-modal-next" aria-label="Nächstes Bild">›</button>
+        <button type="button" class="modal__close" id="einblicke-modal-close" aria-label="Ansicht schließen">×</button>
+        <img id="einblicke-modal-image" src="" alt="" />
+        <h3 id="einblicke-modal-title"></h3>
+        <p id="einblicke-modal-text"></p>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var drawer = document.getElementById("nav-drawer");
+        if (!drawer) return;
+        document.querySelectorAll("#site-nav a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            drawer.checked = false;
+          });
+        });
+
+        var tabs = Array.prototype.slice.call(document.querySelectorAll(".einblicke-tab"));
+        var panels = Array.prototype.slice.call(document.querySelectorAll(".einblicke-panel"));
+
+        function activateTab(targetName) {
+          tabs.forEach(function (tab) {
+            var isActive = tab.getAttribute("data-tab-target") === targetName;
+            tab.classList.toggle("is-active", isActive);
+            tab.setAttribute("aria-selected", isActive ? "true" : "false");
+            tab.tabIndex = isActive ? 0 : -1;
+          });
+
+          panels.forEach(function (panel) {
+            var isActive = panel.getAttribute("data-panel") === targetName;
+            panel.classList.toggle("is-active", isActive);
+            panel.hidden = !isActive;
+          });
+        }
+
+        tabs.forEach(function (tab, idx) {
+          tab.addEventListener("click", function () {
+            activateTab(tab.getAttribute("data-tab-target"));
+          });
+
+          tab.addEventListener("keydown", function (event) {
+            if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+            event.preventDefault();
+            var dir = event.key === "ArrowRight" ? 1 : -1;
+            var nextIndex = (idx + dir + tabs.length) % tabs.length;
+            tabs[nextIndex].focus();
+            activateTab(tabs[nextIndex].getAttribute("data-tab-target"));
+          });
+        });
+
+        var farbauswahl = document.querySelector("[data-farbauswahl]");
+        if (farbauswahl) {
+          var picture = farbauswahl.querySelector("[data-farbauswahl-picture]");
+          var image = farbauswahl.querySelector("[data-farbauswahl-image]");
+          var activeLabel = farbauswahl.querySelector("[data-farbauswahl-active]");
+          var activeDescription = farbauswahl.querySelector("[data-farbauswahl-description]");
+          var ideasTitle = document.querySelector("[data-ideen-title]");
+          var desktopSource = picture ? picture.querySelector('source[media=\"(min-width: 1025px)\"]') : null;
+          var tabletSource = picture ? picture.querySelector('source[media=\"(min-width: 641px)\"]') : null;
+          var swatches = Array.prototype.slice.call(farbauswahl.querySelectorAll(".farbauswahl__swatch"));
+
+          var colorMap = {
+            weiss: {
+              desktop: "assets/wohnzimmer/farben/wohnzimmer-weiss-1600.webp",
+              tablet: "assets/wohnzimmer/farben/wohnzimmer-weiss-800.webp",
+              mobile: "assets/wohnzimmer/farben/wohnzimmer-weiss-400.webp"
+            },
+            beige: {
+              desktop: "assets/wohnzimmer/farben/wohnzimmer-beige-1600.webp",
+              tablet: "assets/wohnzimmer/farben/wohnzimmer-beige-800.webp",
+              mobile: "assets/wohnzimmer/farben/wohnzimmer-beige-400.webp"
+            },
+            grau: {
+              desktop: "assets/wohnzimmer/farben/wohnzimmer-grau-1600.webp",
+              tablet: "assets/wohnzimmer/farben/wohnzimmer-grau-800.webp",
+              mobile: "assets/wohnzimmer/farben/wohnzimmer-grau-400.webp"
+            },
+            salbeigruen: {
+              desktop: "assets/wohnzimmer/farben/wohnzimmer-salbeigruen-1600.webp",
+              tablet: "assets/wohnzimmer/farben/wohnzimmer-salbeigruen-800.webp",
+              mobile: "assets/wohnzimmer/farben/wohnzimmer-salbeigruen-400.webp"
+            },
+            blaugrau: {
+              desktop: "assets/wohnzimmer/farben/wohnzimmer-blaugrau-1600.webp",
+              tablet: "assets/wohnzimmer/farben/wohnzimmer-blaugrau-800.webp",
+              mobile: "assets/wohnzimmer/farben/wohnzimmer-blaugrau-400.webp"
+            },
+            warmtaupe: {
+              desktop: "assets/wohnzimmer/farben/wohnzimmer-warmtaupe-1600.webp",
+              tablet: "assets/wohnzimmer/farben/wohnzimmer-warmtaupe-800.webp",
+              mobile: "assets/wohnzimmer/farben/wohnzimmer-warmtaupe-400.webp"
+            }
+          };
+
+          var colorDescriptions = {
+            weiss: "Klar, hell und zeitlos – ideal für ruhige, offene Räume.",
+            beige: "Warm und wohnlich – bringt Sanftheit in moderne Einrichtungen.",
+            grau: "Neutral und elegant – schafft eine ruhige, reduzierte Wirkung.",
+            salbeigruen: "Natürlich und beruhigend – passt gut zu Holz und hellen Stoffen.",
+            blaugrau: "Kühl und modern – wirkt klar, hochwertig und zurückhaltend.",
+            warmtaupe: "Warm, edel und gemütlich – ideal für wohnliche Räume mit Tiefe."
+          };
+
+          var ideasHeadingLabels = {
+            weiss: "Gestaltungsideen in Weiß",
+            beige: "Gestaltungsideen in Beige",
+            grau: "Gestaltungsideen in Grau",
+            salbeigruen: "Gestaltungsideen in Salbeigrün",
+            blaugrau: "Gestaltungsideen in Blaugrau",
+            warmtaupe: "Gestaltungsideen in Warmtaupe"
+          };
+
+          Object.keys(colorMap).forEach(function (key) {
+            ["desktop", "tablet", "mobile"].forEach(function (size) {
+              var imgPreload = new Image();
+              imgPreload.src = colorMap[key][size];
+            });
+          });
+
+          function setActiveSwatch(activeBtn) {
+            swatches.forEach(function (button) {
+              var isActive = button === activeBtn;
+              button.classList.toggle("is-active", isActive);
+              button.setAttribute("aria-checked", isActive ? "true" : "false");
+            });
+          }
+
+          function switchColor(colorKey, label) {
+            var data = colorMap[colorKey];
+            if (!data || !picture || !image || !desktopSource || !tabletSource) return;
+            picture.classList.add("is-fading");
+            window.setTimeout(function () {
+              desktopSource.srcset = data.desktop;
+              tabletSource.srcset = data.tablet;
+              image.src = data.mobile;
+              image.alt = "Wohnzimmer in " + label;
+              if (activeLabel) activeLabel.textContent = label;
+              if (activeDescription) activeDescription.textContent = colorDescriptions[colorKey] || "";
+              if (ideasTitle) ideasTitle.textContent = ideasHeadingLabels[colorKey] || "Gestaltungsideen mit Ihrer Farbe";
+              if (image.complete) {
+                picture.classList.remove("is-fading");
+              } else {
+                image.onload = function () {
+                  picture.classList.remove("is-fading");
+                  image.onload = null;
+                };
+              }
+            }, 90);
+          }
+
+          swatches.forEach(function (button) {
+            button.addEventListener("click", function () {
+              var colorKey = button.getAttribute("data-color");
+              var label = button.getAttribute("data-label") || "ausgewählter Farbe";
+              setActiveSwatch(button);
+              switchColor(colorKey, label);
+            });
+          });
+        }
+
+        var modal = document.getElementById("einblicke-modal");
+        var modalImage = document.getElementById("einblicke-modal-image");
+        var modalTitle = document.getElementById("einblicke-modal-title");
+        var modalText = document.getElementById("einblicke-modal-text");
+        var modalClose = document.getElementById("einblicke-modal-close");
+        var modalPrev = document.getElementById("einblicke-modal-prev");
+        var modalNext = document.getElementById("einblicke-modal-next");
+        var triggerButtons = Array.prototype.slice.call(document.querySelectorAll(".einblicke-card-trigger"));
+        var lastTrigger = null;
+        var currentIndex = -1;
+
+        function updateModalFromIndex(index) {
+          var button = triggerButtons[index];
+          if (!button) return;
+          currentIndex = index;
+          modalImage.src = button.getAttribute("data-modal-image") || "";
+          modalImage.alt = button.getAttribute("data-modal-title") || "Visualisierung";
+          modalTitle.textContent = button.getAttribute("data-modal-title") || "";
+          modalText.textContent = button.getAttribute("data-modal-text") || "";
+        }
+
+        function showNextImage(step) {
+          if (!triggerButtons.length) return;
+          var nextIndex = currentIndex + step;
+          if (nextIndex < 0) nextIndex = triggerButtons.length - 1;
+          if (nextIndex >= triggerButtons.length) nextIndex = 0;
+          updateModalFromIndex(nextIndex);
+        }
+
+        function closeModal() {
+          if (!modal) return;
+          modal.hidden = true;
+          document.body.classList.remove("modal-open");
+          if (lastTrigger) lastTrigger.focus();
+        }
+
+        function openModal(button) {
+          if (!modal) return;
+          lastTrigger = button;
+          updateModalFromIndex(triggerButtons.indexOf(button));
+          modal.hidden = false;
+          document.body.classList.add("modal-open");
+          modalClose.focus();
+        }
+
+        triggerButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            openModal(button);
+          });
+        });
+
+        if (modal) {
+          modal.addEventListener("click", function (event) {
+            if (event.target.hasAttribute("data-modal-backdrop")) closeModal();
+          });
+        }
+
+        if (modalClose) modalClose.addEventListener("click", closeModal);
+        if (modalPrev) modalPrev.addEventListener("click", function () { showNextImage(-1); });
+        if (modalNext) modalNext.addEventListener("click", function () { showNextImage(1); });
+
+        document.addEventListener("keydown", function (event) {
+          if (!modal || modal.hidden) return;
+          if (event.key === "Escape") closeModal();
+          if (event.key === "ArrowLeft") showNextImage(-1);
+          if (event.key === "ArrowRight") showNextImage(1);
+        });
+      })();
+    </script>
   </body>
 </html>
