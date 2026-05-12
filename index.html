@@ -293,11 +293,15 @@
             <div class="farbauswahl" data-farbauswahl>
               <div class="farbauswahl__media">
                 <div class="farbauswahl__stage">
-                  <picture class="farbauswahl__picture" data-farbauswahl-picture>
-                    <source media="(min-width: 1025px)" srcset="assets/wohnzimmer/farben/wohnzimmer-weiss-1600.webp" />
-                    <source media="(min-width: 641px)" srcset="assets/wohnzimmer/farben/wohnzimmer-weiss-800.webp" />
+                  <div class="farbauswahl__picture" data-farbauswahl-picture>
                     <img
                       data-farbauswahl-image
+                      srcset="
+                        assets/wohnzimmer/farben/wohnzimmer-weiss-400.webp 400w,
+                        assets/wohnzimmer/farben/wohnzimmer-weiss-800.webp 800w,
+                        assets/wohnzimmer/farben/wohnzimmer-weiss-1600.webp 1600w
+                      "
+                      sizes="(min-width: 1025px) 720px, (min-width: 641px) calc(100vw - 48px), calc(100vw - 32px)"
                       src="assets/wohnzimmer/farben/wohnzimmer-weiss-400.webp"
                       width="800"
                       height="800"
@@ -305,7 +309,7 @@
                       loading="eager"
                       decoding="async"
                     />
-                  </picture>
+                  </div>
                 </div>
               </div>
               <div class="farbauswahl__panel">
@@ -570,43 +574,34 @@
           var activeLabel = farbauswahl.querySelector("[data-farbauswahl-active]");
           var activeDescription = farbauswahl.querySelector("[data-farbauswahl-description]");
           var ideasTitle = document.querySelector("[data-ideen-title]");
-          var desktopSource = picture ? picture.querySelector('source[media=\"(min-width: 1025px)\"]') : null;
-          var tabletSource = picture ? picture.querySelector('source[media=\"(min-width: 641px)\"]') : null;
           var swatches = Array.prototype.slice.call(farbauswahl.querySelectorAll(".farbauswahl__swatch"));
           var colorSwapGen = 0;
           var colorSwapTimeoutId = null;
 
+          var farbBase = "assets/wohnzimmer/farben/wohnzimmer-";
+          function farbBundle(stem) {
+            return {
+              srcset:
+                farbBase +
+                stem +
+                "-400.webp 400w, " +
+                farbBase +
+                stem +
+                "-800.webp 800w, " +
+                farbBase +
+                stem +
+                "-1600.webp 1600w",
+              src: farbBase + stem + "-400.webp"
+            };
+          }
+
           var colorMap = {
-            weiss: {
-              desktop: "assets/wohnzimmer/farben/wohnzimmer-weiss-1600.webp",
-              tablet: "assets/wohnzimmer/farben/wohnzimmer-weiss-800.webp",
-              mobile: "assets/wohnzimmer/farben/wohnzimmer-weiss-400.webp"
-            },
-            beige: {
-              desktop: "assets/wohnzimmer/farben/wohnzimmer-beige-1600.webp",
-              tablet: "assets/wohnzimmer/farben/wohnzimmer-beige-800.webp",
-              mobile: "assets/wohnzimmer/farben/wohnzimmer-beige-400.webp"
-            },
-            grau: {
-              desktop: "assets/wohnzimmer/farben/wohnzimmer-grau-1600.webp",
-              tablet: "assets/wohnzimmer/farben/wohnzimmer-grau-800.webp",
-              mobile: "assets/wohnzimmer/farben/wohnzimmer-grau-400.webp"
-            },
-            salbeigruen: {
-              desktop: "assets/wohnzimmer/farben/wohnzimmer-salbeigruen-1600.webp",
-              tablet: "assets/wohnzimmer/farben/wohnzimmer-salbeigruen-800.webp",
-              mobile: "assets/wohnzimmer/farben/wohnzimmer-salbeigruen-400.webp"
-            },
-            blaugrau: {
-              desktop: "assets/wohnzimmer/farben/wohnzimmer-blaugrau-1600.webp",
-              tablet: "assets/wohnzimmer/farben/wohnzimmer-blaugrau-800.webp",
-              mobile: "assets/wohnzimmer/farben/wohnzimmer-blaugrau-400.webp"
-            },
-            warmtaupe: {
-              desktop: "assets/wohnzimmer/farben/wohnzimmer-warmtaupe-1600.webp",
-              tablet: "assets/wohnzimmer/farben/wohnzimmer-warmtaupe-800.webp",
-              mobile: "assets/wohnzimmer/farben/wohnzimmer-warmtaupe-400.webp"
-            }
+            weiss: farbBundle("weiss"),
+            beige: farbBundle("beige"),
+            grau: farbBundle("grau"),
+            salbeigruen: farbBundle("salbeigruen"),
+            blaugrau: farbBundle("blaugrau"),
+            warmtaupe: farbBundle("warmtaupe")
           };
 
           var colorDescriptions = {
@@ -651,6 +646,17 @@
               "decke-wand": { t800: "wohnzimmer-decke-wand-sanftesgrau-final-800.webp", m1600: "wohnzimmer-decke-wand-sanftesgrau-final-1600.webp" },
               vertikal: { t800: "wohnzimmer-vertikale-streifen-sanftesgrau-800.webp", m1600: "wohnzimmer-vertikale-streifen-sanftesgrau-1600.webp" },
               sockel: { t800: "wohnzimmer-sockel-sanftesgrau-800.webp", m1600: "wohnzimmer-sockel-sanftesgrau-1600.webp" }
+            },
+            salbeigruen: {
+              "akzent-1": { t800: "wohnzimmer-akzent-salbeigruen-800.webp", m1600: "wohnzimmer-akzent-salbeigruen-1600.webp" },
+              "akzent-2": { t800: "wohnzimmer-tvwand-salbeigruen-800.webp", m1600: "wohnzimmer-tvwand-salbeigruen-1600.webp" },
+              "akzent-3": { t800: "wohnzimmer-fensterwand-salbeigruen-800.webp", m1600: "wohnzimmer-fensterwand-salbeigruen-1600.webp" },
+              "akzent-4": { t800: "wohnzimmer-decke-salbeigruen-800.webp", m1600: "wohnzimmer-decke-salbeigruen-1600.webp" },
+              halbhohe: { t800: "wohnzimmer-halbe-wand-salbeigruen-800.webp", m1600: "wohnzimmer-halbe-wand-salbeigruen-1600.webp" },
+              toninton: { t800: "wohnzimmer-salbeigruen-abstufung-800.webp", m1600: "wohnzimmer-salbeigruen-abstufung-1600.webp" },
+              "decke-wand": { t800: "wohnzimmer-decke-wand-salbeigruen-final-800.webp", m1600: "wohnzimmer-decke-wand-salbeigruen-final-1600.webp" },
+              vertikal: { t800: "wohnzimmer-vertikale-streifen-salbeigruen-800.webp", m1600: "wohnzimmer-vertikale-streifen-salbeigruen-1600.webp" },
+              sockel: { t800: "wohnzimmer-sockel-salbeigruen-800.webp", m1600: "wohnzimmer-sockel-salbeigruen-1600.webp" }
             }
           };
 
@@ -679,16 +685,22 @@
               var img = btn.querySelector("img");
               if (img) {
                 img.loading = "eager";
-                img.src = paths.thumb;
+                var thumb800 = paths.thumb;
+                var thumb400 = thumb800.replace(/-800\.webp$/i, "-400.webp");
+                img.src = thumb400;
+                img.srcset = thumb400 + " 400w, " + thumb800 + " 800w";
+                img.sizes = "(min-width: 981px) 24vw, (min-width: 641px) 45vw, 50vw";
                 img.alt = paths.alt;
               }
             });
           }
 
           Object.keys(colorMap).forEach(function (key) {
-            ["desktop", "tablet", "mobile"].forEach(function (size) {
+            colorMap[key].srcset.split(",").forEach(function (part) {
+              var url = part.trim().split(/\s+/)[0];
+              if (!url) return;
               var imgPreload = new Image();
-              imgPreload.src = colorMap[key][size];
+              imgPreload.src = url;
             });
           });
 
@@ -700,6 +712,11 @@
                 var ideenPre = new Image();
                 ideenPre.src = ideenBasePath + filenames[sizeKey];
               });
+              var t400 = filenames.t800.replace(/-800\.webp$/i, "-400.webp");
+              if (t400 !== filenames.t800) {
+                var ideenPre400 = new Image();
+                ideenPre400.src = ideenBasePath + t400;
+              }
             });
           });
 
@@ -713,7 +730,7 @@
 
           function switchColor(colorKey, label) {
             var data = colorMap[colorKey];
-            if (!data || !picture || !image || !desktopSource || !tabletSource) return;
+            if (!data || !picture || !image) return;
             colorSwapGen += 1;
             var swapId = colorSwapGen;
             if (colorSwapTimeoutId !== null) {
@@ -726,9 +743,8 @@
             colorSwapTimeoutId = window.setTimeout(function () {
               colorSwapTimeoutId = null;
               if (swapId !== colorSwapGen) return;
-              desktopSource.srcset = data.desktop;
-              tabletSource.srcset = data.tablet;
-              image.src = data.mobile;
+              image.srcset = data.srcset;
+              image.src = data.src;
               image.alt = "Wohnzimmer in " + label;
               if (activeLabel) activeLabel.textContent = label;
               if (activeDescription) activeDescription.textContent = colorDescriptions[colorKey] || "";
