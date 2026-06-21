@@ -423,12 +423,144 @@
             data-panel="fassade"
             hidden
           >
-            <div class="cards cards--einblicke">
-              <article class="card card--farb card--placeholder"><h3>Visualisierung folgt</h3></article>
-              <article class="card card--farb card--placeholder"><h3>Visualisierung folgt</h3></article>
-              <article class="card card--farb card--placeholder"><h3>Visualisierung folgt</h3></article>
+            <p class="einblicke-step">1. Haus und Fassadenfarbe wählen</p>
+            <h3 class="einblicke-subhead">Farbwirkung an der Fassade</h3>
+            <p class="einblicke-step__intro">
+              Wählen Sie einen Haustyp und sehen Sie, wie unterschiedliche Fassadenfarben die Wirkung Ihres Gebäudes
+              verändern.
+            </p>
+            <div class="farbauswahl farbauswahl--fassade" data-fassade-auswahl>
+              <div class="farbauswahl__media">
+                <div class="farbauswahl__stage farbauswahl__stage--landscape">
+                  <div class="farbauswahl__picture" data-fassade-picture>
+                    <img
+                      data-fassade-image
+                      srcset="
+                        assets/fassade/bauernhaus/farben/bauernhaus-weiss-400.webp 400w,
+                        assets/fassade/bauernhaus/farben/bauernhaus-weiss-800.webp 800w,
+                        assets/fassade/bauernhaus/farben/bauernhaus-weiss-1600.webp 1600w
+                      "
+                      sizes="(min-width: 1025px) 720px, (min-width: 641px) calc(100vw - 48px), calc(100vw - 32px)"
+                      src="assets/fassade/bauernhaus/farben/bauernhaus-weiss-400.webp"
+                      width="800"
+                      height="450"
+                      alt="Bauernhaus mit klassisch weißer Fassade"
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </div>
+                  <p class="fassade__placeholder" data-fassade-placeholder hidden>Visualisierung folgt</p>
+                </div>
+              </div>
+              <div class="farbauswahl__panel">
+                <p class="farbauswahl__label">Haustyp wählen</p>
+                <div class="fassade__haustypen" role="radiogroup" aria-label="Haustyp auswählen">
+                  <button
+                    type="button"
+                    class="fassade__haustyp is-active"
+                    role="radio"
+                    aria-checked="true"
+                    data-haus="bauernhaus"
+                    data-haus-label="Bauernhaus"
+                  >
+                    Bauernhaus
+                  </button>
+                  <button
+                    type="button"
+                    class="fassade__haustyp"
+                    role="radio"
+                    aria-checked="false"
+                    data-haus="laendliches-haus"
+                    data-haus-label="Ländliches Haus"
+                  >
+                    Ländliches Haus
+                  </button>
+                  <button
+                    type="button"
+                    class="fassade__haustyp"
+                    role="radio"
+                    aria-checked="false"
+                    data-haus="modernes-haus"
+                    data-haus-label="Modernes Haus"
+                  >
+                    Modernes Haus
+                  </button>
+                </div>
+                <p class="farbauswahl__label farbauswahl__label--spaced">Fassadenfarbe wählen</p>
+                <div class="farbauswahl__controls" data-fassade-colors role="radiogroup" aria-label="Fassadenfarbe auswählen">
+                  <button
+                    type="button"
+                    class="farbauswahl__swatch is-active"
+                    role="radio"
+                    aria-checked="true"
+                    data-color="weiss"
+                    data-label="Klassisches Weiß"
+                  >
+                    <span class="farbauswahl__dot" style="--swatch:#f5f5f3"></span><span>Klassisches Weiß</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="farbauswahl__swatch"
+                    role="radio"
+                    aria-checked="false"
+                    data-color="beige"
+                    data-label="Warmes Beige"
+                  >
+                    <span class="farbauswahl__dot" style="--swatch:#d8c3a5"></span><span>Warmes Beige</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="farbauswahl__swatch"
+                    role="radio"
+                    aria-checked="false"
+                    data-color="grau"
+                    data-label="Sanftes Grau"
+                  >
+                    <span class="farbauswahl__dot" style="--swatch:#b7b7b7"></span><span>Sanftes Grau</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="farbauswahl__swatch"
+                    role="radio"
+                    aria-checked="false"
+                    data-color="salbeigruen"
+                    data-label="Salbeigrün"
+                  >
+                    <span class="farbauswahl__dot" style="--swatch:#aeb7a2"></span><span>Salbeigrün</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="farbauswahl__swatch"
+                    role="radio"
+                    aria-checked="false"
+                    data-color="blaugrau"
+                    data-label="Blaugrau"
+                  >
+                    <span class="farbauswahl__dot" style="--swatch:#8fa3ad"></span><span>Blaugrau</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="farbauswahl__swatch"
+                    role="radio"
+                    aria-checked="false"
+                    data-color="warmtaupe"
+                    data-label="Warmtaupe"
+                  >
+                    <span class="farbauswahl__dot" style="--swatch:#b8a89a"></span><span>Warmtaupe</span>
+                  </button>
+                </div>
+                <div class="farbauswahl__info">
+                  <p class="farbauswahl__active" data-fassade-active>Klassisches Weiß</p>
+                  <p class="farbauswahl__description" data-fassade-description>
+                    Helle Fassaden wirken freundlich und zeitlos – besonders schön an traditionellen Gebäuden.
+                  </p>
+                  <p class="fassade__notice" data-fassade-notice hidden>
+                    Visualisierungen für diesen Haustyp folgen in Kürze.
+                  </p>
+                </div>
+                <a href="#kontakt" class="btn btn--primary einblicke__cta">Farbberatung anfragen</a>
+              </div>
             </div>
-            <a href="#kontakt" class="btn btn--primary einblicke__cta">Farbberatung anfragen</a>
           </section>
 
           <section
@@ -453,20 +585,75 @@
         <div class="shell">
           <p class="section__eyebrow">Über mich</p>
           <h2 id="about-heading">Malermeister Andreas Herzog</h2>
-          <p class="section__intro">
-            Als traditioneller Meisterbetrieb stehe ich für saubere Arbeit, persönliche Beratung und zuverlässige
-            Ausführung. Regional in Garmisch-Partenkirchen und Umgebung bin ich persönlich für Sie da.
-          </p>
-          <div class="cards cards--trust">
-            <article class="card card--trust">
-              <h3>Meisterqualität</h3>
-            </article>
-            <article class="card card--trust">
-              <h3>Saubere Baustelle</h3>
-            </article>
-            <article class="card card--trust">
-              <h3>Persönlicher Ansprechpartner</h3>
-            </article>
+          <div class="about__grid">
+            <div class="about__content">
+              <p class="section__intro">
+                Als traditioneller Meisterbetrieb stehe ich für saubere Arbeit, persönliche Beratung und zuverlässige
+                Ausführung. Regional in Garmisch-Partenkirchen und Umgebung bin ich persönlich für Sie da.
+              </p>
+              <p class="about__text">
+                Als Ein-Mann-Meisterbetrieb haben Sie immer denselben Ansprechpartner – von der Besichtigung bis zum
+                letzten Pinselstrich.
+              </p>
+              <div class="cards cards--trust">
+                <article class="card card--trust">
+                  <span class="trust__icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M24 6L10 12v12c0 8 6 15 14 18 8-3 14-10 14-18V12L24 6z"
+                        stroke="currentColor"
+                        stroke-width="1.25"
+                      />
+                      <path d="M17 24l4 4 10-10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <h3>Meisterqualität</h3>
+                </article>
+                <article class="card card--trust">
+                  <span class="trust__icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M24 10l2.2 6.6h7l-5.7 4.1 2.2 6.7L24 23.3l-5.7 4.1 2.2-6.7-5.7-4.1h7L24 10z"
+                        stroke="currentColor"
+                        stroke-width="1.1"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <h3>Saubere Baustelle</h3>
+                </article>
+                <article class="card card--trust">
+                  <span class="trust__icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="17" r="6" stroke="currentColor" stroke-width="1.25" />
+                      <path
+                        d="M14 38c0-6 4.5-10 10-10s10 4 10 10"
+                        stroke="currentColor"
+                        stroke-width="1.25"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <h3>Persönlicher Ansprechpartner</h3>
+                </article>
+              </div>
+            </div>
+            <figure class="about__media">
+              <img
+                src="assets/maler-vorstellung-400.webp"
+                srcset="
+                  assets/maler-vorstellung-400.webp 400w,
+                  assets/maler-vorstellung-800.webp 800w,
+                  assets/maler-vorstellung-1600.webp 1600w
+                "
+                sizes="(min-width: 769px) 500px, calc(100vw - 32px)"
+                width="800"
+                height="533"
+                alt="Malermeister Andreas Herzog bei der Arbeit"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
           </div>
         </div>
       </section>
@@ -536,6 +723,7 @@
 
         var tabs = Array.prototype.slice.call(document.querySelectorAll(".einblicke-tab"));
         var panels = Array.prototype.slice.call(document.querySelectorAll(".einblicke-panel"));
+        var refreshFassadePanel = null;
 
         function activateTab(targetName) {
           tabs.forEach(function (tab) {
@@ -550,6 +738,10 @@
             panel.classList.toggle("is-active", isActive);
             panel.hidden = !isActive;
           });
+
+          if (targetName === "fassade" && refreshFassadePanel) {
+            refreshFassadePanel();
+          }
         }
 
         tabs.forEach(function (tab, idx) {
@@ -802,6 +994,222 @@
               var label = button.getAttribute("data-label") || "ausgewählter Farbe";
               setActiveSwatch(button);
               switchColor(colorKey, label);
+            });
+          });
+        }
+
+        var fassadeAuswahl = document.querySelector("[data-fassade-auswahl]");
+        if (fassadeAuswahl) {
+          var fassadePicture = fassadeAuswahl.querySelector("[data-fassade-picture]");
+          var fassadeImage = fassadeAuswahl.querySelector("img[data-fassade-image]");
+          var fassadePlaceholder = fassadeAuswahl.querySelector("[data-fassade-placeholder]");
+          var fassadeActiveLabel = fassadeAuswahl.querySelector("[data-fassade-active]");
+          var fassadeDescription = fassadeAuswahl.querySelector("[data-fassade-description]");
+          var fassadeNotice = fassadeAuswahl.querySelector("[data-fassade-notice]");
+          var fassadeColorsWrap = fassadeAuswahl.querySelector("[data-fassade-colors]");
+          var haustypButtons = Array.prototype.slice.call(fassadeAuswahl.querySelectorAll(".fassade__haustyp"));
+          var fassadeSwatches = Array.prototype.slice.call(fassadeAuswahl.querySelectorAll("[data-fassade-colors] .farbauswahl__swatch"));
+          var currentHaus = "bauernhaus";
+          var currentFassadeColor = "weiss";
+
+          var fassadeColors = ["weiss", "beige", "grau", "salbeigruen", "blaugrau", "warmtaupe"];
+          var fassadeSwapGen = 0;
+
+          var hausConfig = {
+            bauernhaus: { label: "Bauernhaus", colors: fassadeColors },
+            "laendliches-haus": { label: "Ländliches Haus", colors: fassadeColors },
+            "modernes-haus": { label: "Modernes Haus", colors: fassadeColors }
+          };
+
+          var fassadeColorLabels = {
+            weiss: "Klassisches Weiß",
+            beige: "Warmes Beige",
+            grau: "Sanftes Grau",
+            salbeigruen: "Salbeigrün",
+            blaugrau: "Blaugrau",
+            warmtaupe: "Warmtaupe"
+          };
+
+          var fassadeColorDescriptions = {
+            weiss: "Helle Fassaden wirken freundlich und zeitlos – besonders schön an traditionellen Gebäuden.",
+            beige: "Warme Erdtöne harmonieren mit Naturstein, Holz und der alpinen Umgebung.",
+            grau: "Neutrale Grautöne wirken zurückhaltend und edel – ideal für klare Gebäudeformen.",
+            salbeigruen: "Sanftes Grün verbindet die Fassade mit der natürlichen Umgebung.",
+            blaugrau: "Kühle Blaugrautöne setzen moderne Akzente an der Fassade.",
+            warmtaupe: "Warme Tauptöne verleihen dem Haus eine wohnliche, einladende Wirkung."
+          };
+
+          function fassadeBundle(haus, color) {
+            var stem = "assets/fassade/" + haus + "/farben/" + haus + "-" + color;
+            return {
+              srcset:
+                stem + "-400.webp 400w, " + stem + "-800.webp 800w, " + stem + "-1600.webp 1600w",
+              src: stem + "-400.webp"
+            };
+          }
+
+          function setActiveHaustyp(activeBtn) {
+            haustypButtons.forEach(function (button) {
+              var isActive = button === activeBtn;
+              button.classList.toggle("is-active", isActive);
+              button.setAttribute("aria-checked", isActive ? "true" : "false");
+            });
+          }
+
+          function setActiveFassadeSwatch(activeBtn) {
+            fassadeSwatches.forEach(function (button) {
+              var isActive = button === activeBtn;
+              button.classList.toggle("is-active", isActive);
+              button.setAttribute("aria-checked", isActive ? "true" : "false");
+            });
+          }
+
+          function setFassadeColorsEnabled(enabled) {
+            if (!fassadeColorsWrap) return;
+            fassadeColorsWrap.classList.toggle("is-disabled", !enabled);
+            fassadeSwatches.forEach(function (button) {
+              button.disabled = !enabled;
+            });
+          }
+
+          function showFassadePlaceholder(show) {
+            if (fassadePlaceholder) fassadePlaceholder.hidden = !show;
+            if (fassadeNotice) fassadeNotice.hidden = !show;
+          }
+
+          function showFassadeUnavailable(hausLabel) {
+            showFassadePlaceholder(true);
+            setFassadeColorsEnabled(false);
+            if (fassadeActiveLabel) fassadeActiveLabel.textContent = hausLabel;
+            if (fassadeDescription) fassadeDescription.textContent = "";
+          }
+
+          function updateFassadeInfo(colorKey, hausLabel) {
+            var colorLabel = fassadeColorLabels[colorKey] || colorKey;
+            if (fassadeActiveLabel) fassadeActiveLabel.textContent = colorLabel;
+            if (fassadeDescription) {
+              fassadeDescription.textContent = fassadeColorDescriptions[colorKey] || "";
+            }
+            if (fassadeImage) {
+              fassadeImage.alt = hausLabel + " in " + colorLabel;
+            }
+          }
+
+          function applyFassadeImage(haus, colorKey) {
+            var config = hausConfig[haus];
+            if (!config) return;
+
+            if (!config.colors.length) {
+              showFassadeUnavailable(config.label);
+              return;
+            }
+
+            if (config.colors.indexOf(colorKey) === -1) {
+              colorKey = config.colors[0];
+              currentFassadeColor = colorKey;
+              var firstSwatch = null;
+              for (var s = 0; s < fassadeSwatches.length; s++) {
+                if (fassadeSwatches[s].getAttribute("data-color") === colorKey) {
+                  firstSwatch = fassadeSwatches[s];
+                  break;
+                }
+              }
+              if (firstSwatch) setActiveFassadeSwatch(firstSwatch);
+            }
+
+            if (!fassadePicture || !fassadeImage) return;
+
+            setFassadeColorsEnabled(true);
+            showFassadePlaceholder(false);
+            fassadePicture.classList.remove("is-fading");
+
+            var data = fassadeBundle(haus, colorKey);
+            fassadeSwapGen += 1;
+            var swapId = fassadeSwapGen;
+
+            fassadeImage.onload = null;
+            fassadeImage.onerror = null;
+
+            function revealFassadeImage() {
+              if (swapId !== fassadeSwapGen) return;
+              fassadeImage.onload = null;
+              fassadeImage.onerror = null;
+              showFassadePlaceholder(false);
+              fassadePicture.classList.remove("is-fading");
+              updateFassadeInfo(colorKey, config.label);
+            }
+
+            function failFassadeImage() {
+              if (swapId !== fassadeSwapGen) return;
+              fassadeImage.onload = null;
+              fassadeImage.onerror = null;
+              showFassadeUnavailable(config.label);
+              fassadePicture.classList.remove("is-fading");
+            }
+
+            fassadeImage.onload = revealFassadeImage;
+            fassadeImage.onerror = failFassadeImage;
+            fassadeImage.srcset = data.srcset;
+            fassadeImage.src = data.src;
+
+            if (fassadeImage.complete && fassadeImage.naturalWidth > 0) {
+              revealFassadeImage();
+            }
+          }
+
+          function switchHaustyp(hausKey, activeBtn) {
+            currentHaus = hausKey;
+            setActiveHaustyp(activeBtn);
+            var config = hausConfig[hausKey];
+            if (!config) return;
+
+            if (!config.colors.length) {
+              applyFassadeImage(hausKey, currentFassadeColor);
+              return;
+            }
+
+            if (config.colors.indexOf(currentFassadeColor) === -1) {
+              currentFassadeColor = config.colors[0];
+            }
+            var swatchForColor = null;
+            for (var i = 0; i < fassadeSwatches.length; i++) {
+              if (fassadeSwatches[i].getAttribute("data-color") === currentFassadeColor) {
+                swatchForColor = fassadeSwatches[i];
+                break;
+              }
+            }
+            if (swatchForColor) setActiveFassadeSwatch(swatchForColor);
+            applyFassadeImage(hausKey, currentFassadeColor);
+          }
+
+          refreshFassadePanel = function () {
+            applyFassadeImage(currentHaus, currentFassadeColor);
+          };
+
+          Object.keys(hausConfig).forEach(function (hausKey) {
+            hausConfig[hausKey].colors.forEach(function (colorKey) {
+              var data = fassadeBundle(hausKey, colorKey);
+              data.srcset.split(",").forEach(function (part) {
+                var url = part.trim().split(/\s+/)[0];
+                if (!url) return;
+                var preload = new Image();
+                preload.src = url;
+              });
+            });
+          });
+
+          haustypButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+              switchHaustyp(button.getAttribute("data-haus"), button);
+            });
+          });
+
+          fassadeSwatches.forEach(function (button) {
+            button.addEventListener("click", function () {
+              if (button.disabled) return;
+              currentFassadeColor = button.getAttribute("data-color");
+              setActiveFassadeSwatch(button);
+              applyFassadeImage(currentHaus, currentFassadeColor);
             });
           });
         }

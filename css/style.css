@@ -389,6 +389,10 @@ section[id] {
   background: var(--trust-bg);
 }
 
+.section--about {
+  background: var(--trust-bg);
+}
+
 .section__eyebrow {
   margin: 0 0 10px;
   font-size: 12px;
@@ -438,6 +442,62 @@ section[id] {
 
 .cards--trust {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about__grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 500px);
+  gap: 40px;
+  align-items: center;
+}
+
+.about__content .section__intro {
+  max-width: none;
+  margin-top: 0;
+}
+
+.about__text {
+  margin: 14px 0 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.about__media {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(51, 51, 51, 0.16);
+  border-radius: 24px;
+  background: #ebe6e0;
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.about__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about__content .card--trust {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: auto;
+  padding: 20px 18px;
+}
+
+.about__content .card--trust .trust__icon {
+  width: 36px;
+  height: 36px;
+  color: var(--accent-dark);
+}
+
+.about__content .card--trust h3 {
+  font-size: 15px;
+  line-height: 1.35;
 }
 
 .cards--farbberatung {
@@ -492,6 +552,80 @@ section[id] {
     0 18px 34px rgba(0, 0, 0, 0.08),
     inset 0 0 0 1px rgba(255, 255, 255, 0.25);
   overflow: hidden;
+  position: relative;
+}
+
+.farbauswahl__stage--landscape {
+  aspect-ratio: 16 / 9;
+}
+
+.farbauswahl--fassade .farbauswahl__media {
+  display: block;
+  width: 100%;
+}
+
+.farbauswahl--fassade .farbauswahl__picture.is-fading {
+  opacity: 1;
+}
+
+.farbauswahl__label--spaced {
+  margin-top: 18px;
+}
+
+.fassade__haustypen {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.fassade__haustyp {
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px 10px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.fassade__haustyp.is-active {
+  border-color: var(--accent);
+  background: rgba(33, 136, 150, 0.08);
+  color: var(--accent-dark);
+}
+
+.fassade__haustyp:hover {
+  border-color: rgba(33, 136, 150, 0.45);
+}
+
+.fassade__placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  background: #ece7e2;
+}
+
+.fassade__notice {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--accent-dark);
+}
+
+.farbauswahl__controls.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
 }
 
 .farbauswahl__picture {
@@ -1124,6 +1258,10 @@ section[id] {
   .kontakt__grid {
     grid-template-columns: 1fr;
   }
+
+  .about__content .cards--trust {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Kleines Tablet / großes Handy */
@@ -1249,6 +1387,11 @@ section[id] {
   .cards--einblicke-farben,
   .cards--ideen {
     grid-template-columns: 1fr;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .trust__inner {
@@ -1543,6 +1686,10 @@ section[id] {
     gap: 8px;
   }
 
+  .fassade__haustypen {
+    grid-template-columns: 1fr;
+  }
+
   .einblicke-tab {
     flex: 1 1 auto;
     text-align: center;
@@ -1574,4 +1721,38 @@ section[id] {
     width: 100%;
     justify-self: stretch;
   }
+}
+
+/* Fassade: Bild-Stacking & Stage-Höhe (Override) */
+.farbauswahl--fassade .farbauswahl__stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.farbauswahl--fassade .farbauswahl__picture {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.farbauswahl--fassade .farbauswahl__picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.farbauswahl--fassade .fassade__placeholder {
+  z-index: 2;
+}
+
+.fassade__placeholder[hidden] {
+  display: none !important;
+  pointer-events: none !important;
 }
