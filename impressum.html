@@ -1,102 +1,143 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum | Malermeister Andreas Herzog</title>
-  <meta name="description" content="Impressum und Angaben gemäß § 5 TMG – Malermeister Andreas Herzog, Garmisch-Partenkirchen.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="brand" aria-label="Andreas Herzog, Malermeister">
-        <img src="assets/logo.png?v=20260326" alt="Logo Andreas Herzog" class="brand__icon" width="56" height="56">
-        <span class="brand__text">
-          <span class="brand__name">Andreas <span class="brand__name-accent">Herzog</span></span>
-          <span class="brand__sub">Malermeister</span>
-        </span>
-      </a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="main-nav" id="main-nav">
-        <ul class="nav-list">
-          <li><a href="index.html">Start</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="referenzen.html">Referenzen</a></li>
-          <li><a href="ueber-mich.html">Über mich</a></li>
-          <li><a href="subunternehmer.html">Subunternehmer</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Impressum | Malermeister Andreas Herzog</title>
+    <meta
+      name="description"
+      content="Impressum und Angaben gemäß § 5 TMG – Malermeister Andreas Herzog, Garmisch-Partenkirchen."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css?v=10" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner shell">
+        <input type="checkbox" id="nav-drawer" class="nav-drawer__checkbox" />
 
-  <main id="main-content">
-    <header class="page-header">
-      <div class="container">
-        <h1>Impressum</h1>
+        <label for="nav-drawer" class="nav-drawer__burger" aria-label="Menü öffnen und schließen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <a href="index.html" class="site-logo" aria-label="Zur Startseite Andreas Herzog">
+          <img
+            src="assets/logo-new-header.webp"
+            width="760"
+            height="180"
+            alt="Andreas Herzog Malermeister"
+          />
+        </a>
+
+        <a href="tel:+491711968368" class="header-cta" aria-label="Jetzt anrufen">
+          <span class="header-cta__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5 4h3l2 5-2 1a11 11 0 005 5l1-2 5 2v3a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="header-cta__label">Jetzt anrufen</span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+          <a href="tel:+491711968368" class="site-nav__call">Jetzt anrufen</a>
+          <a href="index.html#leistungen">Leistungen</a>
+          <a href="index.html#ueber-mich">Über mich</a>
+          <a href="index.html#einblicke">Einblicke</a>
+          <a href="index.html#kontakt">Kontakt</a>
+        </nav>
+
+        <label for="nav-drawer" class="nav-drawer__scrim" aria-hidden="true"></label>
       </div>
     </header>
 
-    <section class="section legal-content">
-      <div class="container prose">
-        <p>Angaben gemäß § 5 Telemediengesetz (TMG):</p>
+    <main id="main-content">
+      <section class="section section--legal" aria-labelledby="impressum-heading">
+        <div class="shell">
+          <p class="section__eyebrow">Rechtliches</p>
+          <h1 id="impressum-heading">Impressum</h1>
 
-        <h2>Anbieter</h2>
-        <p>
-          Andreas Herzog<br>
-          Malermeister<br>
-          [Straße und Hausnummer]<br>
-          [PLZ] Garmisch-Partenkirchen
-        </p>
+          <div class="legal-prose">
+            <p>Angaben gemäß § 5 Telemediengesetz (TMG):</p>
 
-        <h2>Kontakt</h2>
-        <p>
-          Telefon: [Ihre Telefonnummer]<br>
-          E-Mail: [Ihre E-Mail-Adresse]
-        </p>
+            <h2>Anbieter</h2>
+            <p>
+              Andreas Herzog<br />
+              Malermeister<br />
+              [Straße und Hausnummer]<br />
+              [PLZ] Garmisch-Partenkirchen
+            </p>
 
-        <h2>Rechtsform</h2>
-        <p>Einzelunternehmer (kein Ladenlokal, kein Publikumsverkehr; mobile Tätigkeit beim Kunden vor Ort.)</p>
+            <h2>Kontakt</h2>
+            <p>
+              Telefon: <a href="tel:+491711968368">+49 171 1968368</a><br />
+              E-Mail: <a href="mailto:info@malermeister-herzog.de">info@malermeister-herzog.de</a>
+            </p>
 
-        <h2>Umsatzsteuer-ID</h2>
-        <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [falls vorhanden, eintragen; sonst Absatz entfernen oder „nicht vorhanden“]</p>
+            <h2>Rechtsform</h2>
+            <p>
+              Einzelunternehmer (kein Ladenlokal, kein Publikumsverkehr; mobile Tätigkeit beim Kunden vor Ort.)
+            </p>
 
-        <h2>Verantwortlich für den Inhalt</h2>
-        <p>Andreas Herzog (Anschrift wie oben)</p>
+            <h2>Umsatzsteuer-ID</h2>
+            <p>
+              Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [falls vorhanden, eintragen; sonst Absatz
+              entfernen oder „nicht vorhanden“]
+            </p>
 
-        <h2>Haftungsausschluss</h2>
-        <p><strong>Haftung für Inhalte:</strong> Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen. Bei Bekanntwerden von Rechtsverletzungen werden wir die entsprechenden Inhalte umgehend entfernen.</p>
-        <p><strong>Haftung für Links:</strong> Unser Angebot enthält Links zu externen Websites. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich. Wir haben keinen Einfluss auf die Inhalte und übernehmen dafür keine Gewähr.</p>
+            <h2>Verantwortlich für den Inhalt</h2>
+            <p>Andreas Herzog (Anschrift wie oben)</p>
+
+            <h2>Haftungsausschluss</h2>
+            <p>
+              <strong>Haftung für Inhalte:</strong> Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten
+              nach den allgemeinen Gesetzen verantwortlich. Wir sind nicht verpflichtet, übermittelte oder gespeicherte
+              fremde Informationen zu überwachen. Bei Bekanntwerden von Rechtsverletzungen werden wir die entsprechenden
+              Inhalte umgehend entfernen.
+            </p>
+            <p>
+              <strong>Haftung für Links:</strong> Unser Angebot enthält Links zu externen Websites. Für die Inhalte der
+              verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich. Wir haben keinen Einfluss auf die
+              Inhalte und übernehmen dafür keine Gewähr.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <p class="site-footer__copy">© Malermeister Andreas Herzog · Garmisch-Partenkirchen</p>
+        <nav class="site-footer__legal" aria-label="Rechtliches">
+          <a href="impressum.html" aria-current="page">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </nav>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <a href="index.html" class="brand brand--footer" aria-label="Andreas Herzog, Malermeister">
-        <img src="assets/logo.png?v=20260326" alt="Logo Andreas Herzog" class="brand__icon" width="56" height="56">
-        <span class="brand__text">
-          <span class="brand__name">Andreas <span class="brand__name-accent">Herzog</span></span>
-          <span class="brand__sub">Malermeister</span>
-        </span>
-      </a>
-      <p>Ihr Malermeister für Garmisch-Partenkirchen, Grainau, Farchant und Umgebung</p>
-      <nav class="footer-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </nav>
-    </div>
-  </footer>
-  <script src="js/main.js"></script>
-</body>
+    <script>
+      (function () {
+        var drawer = document.getElementById("nav-drawer");
+        if (!drawer) return;
+        document.querySelectorAll("#site-nav a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            drawer.checked = false;
+          });
+        });
+      })();
+    </script>
+  </body>
 </html>

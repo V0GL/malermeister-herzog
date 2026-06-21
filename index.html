@@ -34,7 +34,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/style.css?v=8" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css?v=10" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -758,7 +759,8 @@
 
               <label class="checkbox">
                 <input type="checkbox" name="datenschutz" required />
-                Ich stimme der Verarbeitung meiner Daten gemäß Datenschutzhinweis zu.
+                Ich stimme der Verarbeitung meiner Daten gemäß
+                <a href="datenschutz.html">Datenschutzhinweis</a> zu.
               </label>
 
               <button type="submit" class="btn btn--primary">Anfrage senden</button>
@@ -767,6 +769,16 @@
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <p class="site-footer__copy">© Malermeister Andreas Herzog · Garmisch-Partenkirchen</p>
+        <nav class="site-footer__legal" aria-label="Rechtliches">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </nav>
+      </div>
+    </footer>
 
     <div class="modal" id="einblicke-modal" role="dialog" aria-modal="true" aria-labelledby="einblicke-modal-title" hidden>
       <div class="modal__backdrop" data-modal-backdrop="true"></div>
