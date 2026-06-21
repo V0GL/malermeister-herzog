@@ -1206,19 +1206,33 @@ section[id] {
 
   .trust__inner {
     grid-template-columns: 1fr 1fr;
-    row-gap: 28px;
-    padding: 36px 0 40px;
+    gap: 20px 24px;
+    padding: 28px 0 32px;
   }
 
   .trust__item {
-    border-right: none;
-    border-bottom: 1px solid var(--line-soft);
-    padding-bottom: 20px;
+    border: none;
+    padding: 0;
+    gap: 6px;
   }
 
   .trust__item:nth-child(odd) {
-    border-right: 1px solid var(--line-soft);
-    padding-right: 14px;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .trust__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .trust__text {
+    display: none;
+  }
+
+  .trust__title {
+    font-size: 10px;
+    letter-spacing: 0.08em;
   }
 
   .cards--leistungen,
@@ -1424,29 +1438,6 @@ section[id] {
     gap: 24px;
   }
 
-  .trust__inner {
-    grid-template-columns: 1fr;
-    row-gap: 0;
-    padding: 32px 0 36px;
-  }
-
-  .trust__item {
-    border-right: none;
-    padding-right: 0;
-    border-bottom: 1px solid var(--line-soft);
-    padding-bottom: 18px;
-  }
-
-  .trust__item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .trust__item:nth-child(odd) {
-    border-right: none;
-    padding-right: 0;
-  }
-
   .cards {
     gap: 16px;
   }
@@ -1624,32 +1615,13 @@ section[id] {
   }
 
   .trust__inner {
-    grid-template-columns: 1fr;
-    padding: 28px 0 32px;
-    row-gap: 0;
-  }
-
-  .trust__item {
-    border-right: none;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--line-soft);
-  }
-
-  .trust__item:last-child {
-    border-bottom: none;
-  }
-
-  .trust__item:nth-child(odd) {
-    border-right: none;
-    padding-right: 0;
+    gap: 16px 18px;
+    padding: 24px 0 28px;
   }
 
   .trust__title {
-    font-size: 11px;
-  }
-
-  .trust__text {
-    font-size: 13px;
+    font-size: 9px;
+    letter-spacing: 0.07em;
   }
 
   .section {
