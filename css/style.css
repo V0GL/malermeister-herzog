@@ -951,7 +951,7 @@ section[id] {
   color: var(--text);
 }
 
-.kontakt__form input,
+.kontakt__form input:not([type="checkbox"]),
 .kontakt__form textarea {
   width: 100%;
   border: 1px solid var(--line-soft);
@@ -976,7 +976,12 @@ section[id] {
 }
 
 .checkbox input {
+  width: auto;
+  flex-shrink: 0;
   margin-top: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
 }
 
 .kontakt__form .btn {
