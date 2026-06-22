@@ -3,6 +3,46 @@
    Header nutzt dieselbe .shell-Breite wie Hero/Trust (rechter Rand identisch).
    ------------------------------------------------------------------ */
 
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/inter-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/inter-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/inter-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/cormorant-garamond-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/cormorant-garamond-700.woff2") format("woff2");
+}
+
 :root {
   --page-bg: #f5f2ee;
   --trust-bg: #faf8f5;
@@ -1962,6 +2002,34 @@ section[id] {
 
 .legal-prose h2:first-child {
   margin-top: 0;
+}
+
+.legal-prose h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.legal-prose h4 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.legal-prose ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.legal-prose li {
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-muted);
 }
 
 .legal-prose p {
