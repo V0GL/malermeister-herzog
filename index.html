@@ -28,7 +28,7 @@
     />
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="css/style.css?v=11" />
+    <link rel="stylesheet" href="css/style.css?v=12" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -734,13 +734,18 @@
         <div class="shell">
           <p class="section__eyebrow">Kontakt</p>
           <h2 id="kontakt-heading">Kontakt</h2>
+          <p class="kontakt__status" id="kontakt-status" role="status" hidden></p>
           <div class="kontakt__grid">
             <div class="kontakt__info">
               <p><strong>Telefon:</strong> <a href="tel:+491711968368">+49 171 1968368</a></p>
               <p><strong>E-Mail:</strong> <a href="mailto:info@malermeister-herzog.de">info@malermeister-herzog.de</a></p>
               <p><strong>Ort:</strong> Garmisch-Partenkirchen und Umgebung</p>
             </div>
-            <form class="kontakt__form" action="#" method="post">
+            <form class="kontakt__form" action="kontakt.php" method="post">
+              <label class="kontakt__honeypot" aria-hidden="true" hidden>
+                Website
+                <input type="text" name="website" tabindex="-1" autocomplete="off" />
+              </label>
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
 
@@ -751,7 +756,7 @@
               <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
 
               <label class="checkbox">
-                <input type="checkbox" name="datenschutz" required />
+                <input type="checkbox" name="datenschutz" value="1" required />
                 Ich stimme der Verarbeitung meiner Daten gemäß
                 <a href="datenschutz.html">Datenschutzhinweis</a> zu.
               </label>
@@ -1355,6 +1360,35 @@
           if (event.key === "ArrowLeft") showNextImage(-1);
           if (event.key === "ArrowRight") showNextImage(1);
         });
+      })();
+
+      (function () {
+        var status = document.getElementById("kontakt-status");
+        if (!status) return;
+
+        var params = new URLSearchParams(window.location.search);
+        var result = params.get("kontakt");
+
+        if (result === "ok") {
+          status.textContent =
+            "Vielen Dank! Ihre Anfrage wurde gesendet. Wir melden uns zeitnah bei Ihnen.";
+          status.className = "kontakt__status kontakt__status--ok";
+          status.hidden = false;
+        } else if (result === "fehler") {
+          status.textContent =
+            "Die Anfrage konnte leider nicht gesendet werden. Bitte rufen Sie uns an oder schreiben Sie eine E-Mail.";
+          status.className = "kontakt__status kontakt__status--error";
+          status.hidden = false;
+        }
+
+        if (result) {
+          params.delete("kontakt");
+          var cleanUrl =
+            window.location.pathname +
+            (params.toString() ? "?" + params.toString() : "") +
+            window.location.hash;
+          window.history.replaceState({}, "", cleanUrl);
+        }
       })();
     </script>
   </body>

@@ -1143,6 +1143,31 @@ section[id] {
   display: grid;
 }
 
+.kontakt__status {
+  max-width: 720px;
+  margin: 16px 0 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.kontakt__status--ok {
+  color: #1f5f3b;
+  background: #e8f5ee;
+  border: 1px solid #b9dcc8;
+}
+
+.kontakt__status--error {
+  color: #7a2e2e;
+  background: #fdeeee;
+  border: 1px solid #f0c4c4;
+}
+
+.kontakt__honeypot {
+  display: none !important;
+}
+
 .kontakt__grid {
   margin-top: 28px;
   display: grid;
